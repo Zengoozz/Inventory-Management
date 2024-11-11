@@ -20,13 +20,14 @@ const searchIconData: PathObject =
 const Navbar = () => {
    return (
       <div className="my-7 mx-8 h-10 flex justify-between items-center">
-         <span className="relative">
-            <i className="absolute left-3 top-1/2 transform -translate-y-1/2">
+         <span className="relative group">
+            <i className="absolute left-3 top-1/2 -translate-y-1/2 group">
                <IconFactory
                   name={searchIconData.name}
                   path={searchIconData.path}
                   grayLevel={searchIconData.grayLevel}
                   hoverBlueShade={searchIconData.hoverBlueShade}
+                  focusBlueShade={searchIconData.focusBlueShade}
                   fill={searchIconData.fill}
                   stroke={searchIconData.stroke}
                   width={24}
@@ -34,13 +35,13 @@ const Navbar = () => {
                />
             </i>
             <input
-               className="h-11 w-96 px-3 text-gray-400 border-[1px] rounded-lg border-gray-200 focus:outline-gray-600"
+               className="h-11 w-96 pl-10 pr-3 text-gray-400 border-[1px] rounded-lg border-gray-200 focus:outline-none focus:ring-2 focus:ring-blue-500"
                placeholder="Search products"
             ></input>
          </span>
 
          <span className="flex items-center">
-            <span className="group mr-3">
+            <span className="group mr-3 hover:cursor-pointer">
                <IconFactory
                   name={notifactionIconData.name}
                   path={notifactionIconData.path}

@@ -4,14 +4,16 @@ const IconFactory = (props: PathObject) => {
 
    const grayLevel = `text-gray-${props.grayLevel}`;
    const bluishHover = props.hoverBlueShade ? "group-hover:text-blue-500" : "";
-   const classList = grayLevel + " " + bluishHover;
+   const bluishFocus = props.focusBlueShade ? "group-focus-within:text-blue-500" : "";
+
+   const classList = `${grayLevel} ${bluishHover} ${bluishFocus}`;
    const fill = `${props.fill ? "currentColor" : "none"}`
    const stroke = `${props.stroke ? "currentColor" : "none"}`
 
    return (
       <>
          <svg
-            className={`inline-block hover:cursor-pointer ${classList}`}
+            className={`inline-block ${classList}`}
             width={`${props.width != null && props.height != null ? props.width : 24} `}
             height={`${props.width != null && props.height != null ? props.height : 24} `}
             viewBox="0 0 24 24"

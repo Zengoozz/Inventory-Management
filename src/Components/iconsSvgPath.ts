@@ -15,7 +15,8 @@ export type PathObject = {
     path: string[],
     sidebarItem?: boolean,
     grayLevel: number,
-    hoverBlueShade: boolean,
+    hoverBlueShade?: boolean,
+    focusBlueShade?: boolean,
     fill: boolean,
     stroke: boolean,
     width?: number,
@@ -55,6 +56,7 @@ export const listOfPaths: PathObject[] = [
         path: getPathData(Search),
         grayLevel: 400,
         hoverBlueShade: false,
+        focusBlueShade: true,
         fill: true,
         stroke: false
     },
