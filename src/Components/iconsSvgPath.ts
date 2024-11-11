@@ -14,6 +14,7 @@ export type PathObject = {
     name: string,
     path: string[],
     sidebarItem?: boolean,
+    sidebarFooterItem?: boolean,
     grayLevel: number,
     hoverBlueShade?: boolean,
     focusBlueShade?: boolean,
@@ -117,14 +118,16 @@ export const listOfPaths: PathObject[] = [
     {
         name: "settings",
         path: getPathData(Settings),
+        sidebarFooterItem: true,
         grayLevel: 600,
         hoverBlueShade: false,
-        fill: true,
-        stroke: false
+        fill: false,
+        stroke: true
     },
     {
         name: "log out",
         path: getPathData(LogOut),
+        sidebarFooterItem: true,
         grayLevel: 600,
         hoverBlueShade: false,
         fill: true,
