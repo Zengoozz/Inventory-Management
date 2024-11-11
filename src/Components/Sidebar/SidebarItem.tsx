@@ -3,8 +3,9 @@ import { PathObject } from "../iconsSvgPath";
 
 const SidebarItem = (props: PathObject) => {
    return (
-      <span className="my-3 flex justify-center text-lg font-medium text-gray-600 group hover:cursor-pointer">
+      <span className="px-1 py-[8px] my-3 flex justify-center text-lg font-medium text-gray-600 group hover:cursor-pointer">
          <IconFactory
+            key={props.name}
             name={props.name}
             path={props.path}
             grayLevel={props.grayLevel}
@@ -12,7 +13,7 @@ const SidebarItem = (props: PathObject) => {
             fill={props.fill}
             stroke={props.stroke}
          />
-         <p className="group-hover:text-blue-500 ml-2 capitalize">{props.name}</p>
+         <p className="text-base group-hover:text-blue-500 ml-3 capitalize">{props.name}</p>
       </span>
    );
 };
