@@ -21,7 +21,7 @@ function App() {
             </nav>
             <main
                id="Hero"
-               className="h-min pl-8 pt-5"
+               className="h-min px-8 pt-5"
             >
                <Hero></Hero>
             </main>

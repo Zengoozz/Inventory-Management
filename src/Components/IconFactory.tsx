@@ -1,4 +1,4 @@
-import { PathObject } from "./iconsSvgPath";
+import { PathObject } from "./iconsSvgPath"
 
 const IconFactory = (props: PathObject) => {
    const grayLevel = `text-gray-${props.grayLevel}`;

@@ -15,7 +15,7 @@ export type PathObject = {
     path: string[],
     sidebarItem?: boolean,
     sidebarFooterItem?: boolean,
-    grayLevel: number,
+    grayLevel?: number,
     hoverBlueShade?: boolean,
     focusBlueShade?: boolean,
     fill: boolean,
@@ -24,7 +24,7 @@ export type PathObject = {
     height?: number
 }
 
-function getPathData(imgPath: string): string[] {
+export function getPathData(imgPath: string): string[] {
     const parser = new DOMParser();
     const svgDoc = parser.parseFromString(imgPath, "image/svg+xml");
     const pathElements = svgDoc.querySelectorAll("path");
