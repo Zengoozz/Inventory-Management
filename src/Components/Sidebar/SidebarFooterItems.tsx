@@ -3,7 +3,7 @@ import SidebarItem from "./SidebarItem"
 
 const SidebarFooterItems = () => {
   return (
-    <div className="flex flex-col h-screen justify-end items-start">
+    <div className="mt-[17.5rem] mb-8 flex flex-col items-start">
          {listOfPaths
             .filter((p) => p.sidebarFooterItem)
             .map((p) => (

@@ -1,5 +1,9 @@
 const Hero = () => {
-   return <>HERO</>;
+   return (
+      <>
+         
+      </>
+   );
 };
 
 export default Hero;

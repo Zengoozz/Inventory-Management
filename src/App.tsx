@@ -5,16 +5,27 @@ import Sidebar from "./Components/Sidebar/Sidebar";
 
 function App() {
    return (
-      <div className="grid grid-cols-[250px] grid-rows-[auto_1fr] min-h-screen">
-         <aside id="side" className="mr-1 bg-white row-span-2">
+      <div className="grid grid-rows-[auto_1fr] grid-cols-[280px_1fr] min-h-screen">
+         <aside
+            id="side"
+            className="min-h-max h-1/2 mr-1 bg-white rounded-r-lg"
+         >
             <Sidebar></Sidebar>
          </aside>
-         <nav id="Nav" className="bg-white col-start-2 top-0 z-10">
-            <Navbar></Navbar>
-         </nav>
-         <main id="Hero" className="col-start-2 pl-8 pt-5">
-            <Hero></Hero>
-         </main>
+         <div className="grid grid-rows-[auto_1fr] col-start-2">
+            <nav
+               id="Nav"
+               className="bg-white top-0 z-10"
+            >
+               <Navbar></Navbar>
+            </nav>
+            <main
+               id="Hero"
+               className="h-min pl-8 pt-5"
+            >
+               <Hero></Hero>
+            </main>
+         </div>
       </div>
    );
 }

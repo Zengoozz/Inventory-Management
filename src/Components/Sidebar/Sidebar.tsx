@@ -1,6 +1,6 @@
 import Logo from "../../assets/tic-tac-toe.png";
-// import SidebarFooterItems from "./SidebarFooterItems";
 import SidebarItemsList from "./SidebarItemsList";
+import SidebarFooterItems from "./SidebarFooterItems";
 
 const Sidebar = () => {
    return (
@@ -16,7 +16,7 @@ const Sidebar = () => {
             </p>
          </span>
          <SidebarItemsList />
-         {/* <SidebarFooterItems /> */}
+         <SidebarFooterItems />
       </div>
    );
 };
