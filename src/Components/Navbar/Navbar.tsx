@@ -36,7 +36,7 @@ const Navbar = () => {
             </i>
             <input
                className="h-11 w-96 pl-10 pr-3 text-gray-400 border-[1px] rounded-lg border-gray-200 focus:outline-none focus:ring-2 focus:ring-blue-500"
-               placeholder="Search products"
+               placeholder="Search product, supplier, order"
             ></input>
          </span>
 
