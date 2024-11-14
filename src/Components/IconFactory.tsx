@@ -1,9 +1,11 @@
-import { PathObject } from "./iconsSvgPath"
+import { PathObject } from "./iconsSvgPath";
 
 const IconFactory = (props: PathObject) => {
    const grayLevel = `text-gray-${props.grayLevel}`;
    const bluishHover = props.hoverBlueShade ? "group-hover:text-blue-500" : "";
    const bluishFocus = props.focusBlueShade ? "group-focus-within:text-blue-500" : "";
+   const width = props.width != null && props.height != null ? props.width : 24;
+   const height = props.width != null && props.height != null ? props.height : 24;
 
    const classList = `${grayLevel} ${bluishHover} ${bluishFocus}`;
    const fill = `${props.fill ? "currentColor" : "none"}`;
@@ -14,9 +16,9 @@ const IconFactory = (props: PathObject) => {
          <svg
             key={props.name}
             className={`inline-block ${classList}`}
-            width={`${props.width != null && props.height != null ? props.width : 24} `}
-            height={`${props.width != null && props.height != null ? props.height : 24} `}
-            viewBox="0 0 24 24"
+            width={width}
+            height={height}
+            viewBox={`0 0 ${width} ${height}`}
             stroke="none"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
