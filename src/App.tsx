@@ -8,7 +8,7 @@ function App() {
       <div className="grid grid-rows-[auto_1fr] grid-cols-[280px_1fr] min-h-screen">
          <aside
             id="side"
-            className="min-h-max h-1/2 mr-1 bg-white rounded-r-lg"
+            className="min-h-max h-1/2 mr-[2px] bg-white rounded-r-lg"
          >
             <Sidebar></Sidebar>
          </aside>
