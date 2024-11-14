@@ -11,7 +11,7 @@ const Sidebar = () => {
                width={45}
                height={45}
             />
-            <p className="ml-3 font-bold text-xl  text-blue-500 uppercase">
+            <p className="ml-3 font-bold text-customXl  text-blue-500 uppercase">
                tic-tac
             </p>
          </span>
