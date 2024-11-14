@@ -1,12 +1,19 @@
-import IconFactory from "../IconFactory";
-import { getPathData } from "../iconsSvgPath";
-import Sales from "../../assets/Icons/Sales.svg?raw";
+import Sales from "../../assets/Icons/Sales.svg";
+import Revenue from "../../assets/Icons/Revenue.svg";
+import Profit from "../../assets/Icons/Profit.svg";
+import Cost from "../../assets/Icons/Cost.svg";
+import Purchase from "../../assets/Icons/Purchase.svg";
+import Cancel from "../../assets/Icons/Cancel.svg";
+import Quantity from "../../assets/Icons/Quantity.svg";
+import OnTheWay from "../../assets/Icons/OnTheWay.svg";
+import SuppliersSummary from "../../assets/Icons/SuppliersSummary.svg";
+import Categories from "../../assets/Icons/Categories.svg";
 
 export type Icon = {
    Name: string;
-   Icon: JSX.Element;
-   Quantity?: number;
-   IsCash?: boolean;
+   Icon: string;
+   Quantity: number;
+   IsCash: boolean;
 };
 
 export type CardData = {
@@ -18,65 +25,103 @@ export type CardData = {
 
 export const CardsListData: CardData[] = [
    {
-    Index: 0,
+      Index: 0,
       Title: "sales overview",
       Type: "O",
       Icons: [
          {
             Name: "sales",
-            Icon: (
-               <IconFactory
-                  name={"sales"}
-                  path={getPathData(Sales)}
-                  fill={true}
-                  stroke={false}
-                  width={40}
-                  height={40}
-               />
-            ),
+            Icon: Sales,
             Quantity: 832,
-            IsCash: true
+            IsCash: true,
          },
          {
             Name: "revenue",
-            Icon: (
-               <IconFactory
-                  name={"sales"}
-                  path={getPathData(Sales)}
-                  fill={true}
-                  stroke={false}
-               />
-            ),
+            Icon: Revenue,
             Quantity: 18300,
-            IsCash: true
+            IsCash: true,
          },
          {
             Name: "profit",
-            Icon: (
-               <IconFactory
-                  name={"sales"}
-                  path={getPathData(Sales)}
-                  fill={true}
-                  stroke={false}
-               />
-            ),
+            Icon: Profit,
             Quantity: 868,
-            IsCash: true
+            IsCash: true,
          },
          {
             Name: "cost",
-            Icon: (
-               <IconFactory
-                  name={"sales"}
-                  path={getPathData(Sales)}
-                  fill={true}
-                  stroke={false}
-               />
-            ),
+            Icon: Cost,
             Quantity: 17432,
-            IsCash: true
-         }
+            IsCash: true,
+         },
       ],
    },
-   
+   {
+      Index: 1,
+      Title: "inventory summary",
+      Type: "S",
+      Icons: [
+         {
+            Name: "quantity in hand",
+            Icon: Quantity,
+            Quantity: 868,
+            IsCash: false,
+         },
+         {
+            Name: "To be received",
+            Icon: OnTheWay,
+            Quantity: 200,
+            IsCash: false,
+         },
+      ],
+   },
+   {
+      Index: 2,
+      Title: "purchase overview",
+      Type: "O",
+      Icons: [
+         {
+            Name: "purchase",
+            Icon: Purchase,
+            Quantity: 82,
+            IsCash: false,
+         },
+         {
+            Name: "cost",
+            Icon: Cost,
+            Quantity: 13573,
+            IsCash: true,
+         },
+         {
+            Name: "cancel",
+            Icon: Cancel,
+            Quantity: 5,
+            IsCash: false,
+         },
+         {
+            Name: "return",
+            Icon: Profit,
+            Quantity: 17432,
+            IsCash: true,
+         },
+      ],
+   },
+   {
+      Index: 3,
+      Title: "product summary",
+      Type: "S",
+      Icons: [
+         {
+            Name: "number of suppliers",
+            Icon: SuppliersSummary,
+            Quantity: 31,
+            IsCash: false,
+         },
+         {
+            Name: "number of categories",
+            Icon: Categories,
+            Quantity: 21,
+            IsCash: false,
+         },
+      ],
+   },
 ];
