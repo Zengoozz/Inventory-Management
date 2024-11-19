@@ -2,6 +2,8 @@
 import { CardData } from "../CardsData";
 
 
+//TODO: Check the Overview Items Margin Between Name & Qty
+
 export const AreaChartGraph : React.FC<CardData> = () => {
    return (
       // <ResponsiveContainer
