@@ -1,5 +1,6 @@
 import CardItem from "./CardItem";
 import { CardsListData } from "./CardsData";
+import GraphicalCardItem from "./GraphicalCardItem";
 
 const CardsList = () => {
    return (
@@ -12,12 +13,19 @@ const CardsList = () => {
                   </div>
                );
             }
-            if(c.Type == "S"){
-              return (
-                <div className="col-start-2">
-                   <CardItem cardData={c} />
-                </div>
-             );
+            if (c.Type == "S") {
+               return (
+                  <div className="col-start-2">
+                     <CardItem cardData={c} />
+                  </div>
+               );
+            }
+            if (c.Type == "G") {
+               return (
+                  <div>
+                     <GraphicalCardItem {...c} />
+                  </div>
+               );
             }
          })}
       </div>

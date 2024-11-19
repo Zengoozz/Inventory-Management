@@ -26,7 +26,7 @@ const InfoItem = (props: props) => {
    };
 
    const quantity =
-      props.icon.IsCash && props.icon.Quantity.toString().length > 4
+      props.icon.IsCash && props.icon.Quantity != undefined && props.icon.Quantity.toString().length > 4
          ? formatCash(props.icon.Quantity)
          : props.icon.Quantity;
 

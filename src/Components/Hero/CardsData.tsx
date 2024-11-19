@@ -12,15 +12,22 @@ import Categories from "../../assets/Icons/Categories.svg";
 export type Icon = {
    Name: string;
    Icon: string;
-   Quantity: number;
-   IsCash: boolean;
+   Quantity?: number;
+   IsCash?: boolean;
 };
+
+export type GraphData = {
+   xAxisName: string;
+   yAxisVal1: number;
+   yAxisVal2: number;
+}
 
 export type CardData = {
    Index: number;
    Title: string;
-   Type: string; // O >> Overview , S >> Summary, G >> Graph
-   Icons: Icon[];
+   Type: string;// O >> Overview , S >> Summary, G >> Graph
+   Icons?: Icon[];
+   GraphsData?: GraphData[];
 };
 
 export const CardsListData: CardData[] = [
@@ -124,4 +131,61 @@ export const CardsListData: CardData[] = [
          },
       ],
    },
+   {
+      Index: 4,
+      Title: "sales & purchase",
+      Type: "G",
+      GraphsData: [
+         {
+            xAxisName: "Jan",
+            yAxisVal1: 55000,
+            yAxisVal2: 50000,
+         },
+         {
+            xAxisName: "Feb",
+            yAxisVal1: 59000,
+            yAxisVal2: 48000,
+         },
+         {
+            xAxisName: "Mar",
+            yAxisVal1: 45000,
+            yAxisVal2: 52000,
+         },
+         {
+            xAxisName: "Apr",
+            yAxisVal1: 37000,
+            yAxisVal2: 43000,
+         },
+         {
+            xAxisName: "May",
+            yAxisVal1: 44000,
+            yAxisVal2: 47000,
+         },
+         {
+            xAxisName: "Jun",
+            yAxisVal1: 29000,
+            yAxisVal2: 41000,
+         },
+         {
+            xAxisName: "Jul",
+            yAxisVal1: 55000,
+            yAxisVal2: 50000,
+         },
+         {
+            xAxisName: "Aug",
+            yAxisVal1: 45000,
+            yAxisVal2: 42000,
+         },
+         {
+            xAxisName: "Sep",
+            yAxisVal1: 44000,
+            yAxisVal2: 43000,
+         },
+         {
+            xAxisName: "Oct",
+            yAxisVal1: 37000,
+            yAxisVal2: 43000,
+         }
+      ],
+   }
 ];

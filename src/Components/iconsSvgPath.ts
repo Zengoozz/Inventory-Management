@@ -8,6 +8,7 @@ import Order from '../assets/Icons/Order.svg?raw';
 import ManageStore from '../assets/Icons/ManageStore.svg?raw';
 import Settings from '../assets/Icons/Settings.svg?raw';
 import LogOut from '../assets/Icons/LogOut.svg?raw';
+import Calendar from '../assets/Icons/Calendar.svg?raw';
 
 
 export type PathObject = {
@@ -132,5 +133,14 @@ export const listOfPaths: PathObject[] = [
         hoverBlueShade: false,
         fill: true,
         stroke: false
+    },
+    {
+        name: "calendar",
+        path: getPathData(Calendar),
+        grayLevel: 600,
+        fill: true,
+        stroke: false,
+        width: 20,
+        height: 20
     },
 ];
