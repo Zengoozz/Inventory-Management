@@ -34,7 +34,7 @@ const InfoItem = (props: props) => {
    let textColor = "";
    
    if (props.type == "O") {
-      infoStyle = "mt-3 flex justify-around items-center";
+      infoStyle = "mt-3 flex justify-center items-center gap-8";
       textColor = "text-gray-500";
    } else {
       infoStyle = "mt-2 flex flex-col items-center";
