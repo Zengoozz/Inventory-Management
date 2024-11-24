@@ -20,7 +20,7 @@ const CardsList = () => {
                   </div>
                );
             }
-            if (c.Type == "G") {
+            if (c.Type.includes("G")) {
                return (
                   <div>
                      <GraphicalCardItem {...c} />

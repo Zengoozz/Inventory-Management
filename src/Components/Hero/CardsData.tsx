@@ -134,7 +134,7 @@ export const CardsListData: CardData[] = [
    {
       Index: 4,
       Title: "sales & purchase",
-      Type: "G",
+      Type: "GB",
       GraphsData: [
          {
             xAxisName: "Jan",
@@ -185,6 +185,58 @@ export const CardsListData: CardData[] = [
             xAxisName: "Oct",
             yAxisVal1: 37000,
             yAxisVal2: 43000,
+         }
+      ],
+   },
+   {
+      Index: 5,
+      Title: "order summary",
+      Type: "GC",
+      GraphsData: [
+         {
+            xAxisName: "Jan",
+            yAxisVal1: 3700,
+            yAxisVal2: 3100,
+         },
+         {
+            xAxisName: "Jan-1",
+            yAxisVal1: 1800,
+            yAxisVal2: 2200,
+         },
+         {
+            xAxisName: "Feb",
+            yAxisVal1: 2800,
+            yAxisVal2: 3700,
+         },
+         {
+            xAxisName: "Feb-1",
+            yAxisVal1: 2100,
+            yAxisVal2: 3500,
+         },
+         {
+            xAxisName: "Mar",
+            yAxisVal1: 2500,
+            yAxisVal2: 3300,
+         },
+         {
+            xAxisName: "Mar-1",
+            yAxisVal1: 2100,
+            yAxisVal2: 2900,
+         },
+         {
+            xAxisName: "Apr",
+            yAxisVal1: 1500,
+            yAxisVal2: 3300,
+         },
+         {
+            xAxisName: "Apr-1",
+            yAxisVal1: 2000,
+            yAxisVal2: 2200,
+         },
+         {
+            xAxisName: "May",
+            yAxisVal1: 2200,
+            yAxisVal2: 3200,
          }
       ],
    }

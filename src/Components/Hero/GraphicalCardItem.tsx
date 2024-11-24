@@ -1,6 +1,7 @@
 import IconFactory from "../IconFactory";
 import { listOfPaths } from "../iconsSvgPath";
 import { CardData } from "./CardsData";
+import { AreaLineComposedGraph } from "./Graph/AreaLineComposedGraph";
 import { BarChartGraph } from "./Graph/BarChartGraph";
 
 const GraphicalCardItem: React.FC<CardData> = (props) => {
@@ -19,12 +20,17 @@ const GraphicalCardItem: React.FC<CardData> = (props) => {
             <h1 className="inline text-customXl text-gray-800 font-medium capitalize">
                {props.Title}
             </h1>
-            <button className="flex px-4 py-[0.375rem] text-gray-600 text-base font-medium border-2 border-gray-100 rounded-[4px] duration-150 hover:border-gray-300 hover:font-semibold">
-               <IconFactory {...calendarIcon[0]} />
-               <span className="ml-2 capitalize">weekly</span>
-            </button>
+            <>
+               {props.Type == "GB" && (
+                  <button className="flex px-4 py-[0.375rem] text-gray-600 text-base font-medium border-2 border-gray-100 rounded-[4px] duration-150 hover:border-gray-300 hover:font-semibold">
+                     <IconFactory {...calendarIcon[0]} />
+                     <span className="ml-2 capitalize">weekly</span>
+                  </button>
+               )}
+            </>
          </span>
-         <>{props.Type == "G" && <BarChartGraph {...props} />}</>
+         <>{props.Type == "GB" && <BarChartGraph {...props} />}</>
+         <>{props.Type == "GC" && <AreaLineComposedGraph {...props} />}</>
       </div>
    );
 };

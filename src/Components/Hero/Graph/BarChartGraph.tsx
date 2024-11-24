@@ -16,7 +16,7 @@ export const BarChartGraph: React.FC<CardData> = (props) => {
       <ResponsiveContainer
          width="100%"
          height="100%"
-         maxHeight={500}
+         maxHeight={300}
          className={"mt-10"}
       >
          <BarChart
@@ -198,7 +198,7 @@ const gradients: Gradient[] = [
 const RenderLegend: React.FC<RenderLegendProps> = ({ payload }) => {
    return (
       <ul
-         className="w-full mt-4 ml-12 flex gap-5"
+         className="w-full mt-4 flex justify-center gap-5"
          style={{ listStyleType: "none", padding: 0 }}
       >
          {payload?.map((entry, index) => (
