@@ -1,4 +1,4 @@
-import { CardData } from "./CardsData";
+import { CardData } from "../../CardsData";
 import InfoItem from "./InfoItem";
 
 type props = {

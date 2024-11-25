@@ -1,13 +1,13 @@
-import Sales from "../../assets/Icons/Sales.svg";
-import Revenue from "../../assets/Icons/Revenue.svg";
-import Profit from "../../assets/Icons/Profit.svg";
-import Cost from "../../assets/Icons/Cost.svg";
-import Purchase from "../../assets/Icons/Purchase.svg";
-import Cancel from "../../assets/Icons/Cancel.svg";
-import Quantity from "../../assets/Icons/Quantity.svg";
-import OnTheWay from "../../assets/Icons/OnTheWay.svg";
-import SuppliersSummary from "../../assets/Icons/SuppliersSummary.svg";
-import Categories from "../../assets/Icons/Categories.svg";
+import Sales from "../assets/Icons/Sales.svg";
+import Revenue from "../assets/Icons/Revenue.svg";
+import Profit from "../assets/Icons/Profit.svg";
+import Cost from "../assets/Icons/Cost.svg";
+import Purchase from "../assets/Icons/Purchase.svg";
+import Cancel from "../assets/Icons/Cancel.svg";
+import Quantity from "../assets/Icons/Quantity.svg";
+import OnTheWay from "../assets/Icons/OnTheWay.svg";
+import SuppliersSummary from "../assets/Icons/SuppliersSummary.svg";
+import Categories from "../assets/Icons/Categories.svg";
 
 export type Icon = {
    Name: string;

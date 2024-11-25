@@ -1,8 +1,8 @@
-import IconFactory from "../IconFactory";
-import { listOfPaths } from "../iconsSvgPath";
-import { CardData } from "./CardsData";
-import { AreaLineComposedGraph } from "./Graph/AreaLineComposedGraph";
-import { BarChartGraph } from "./Graph/BarChartGraph";
+import IconFactory from "../../IconFactory";
+import { listOfPaths } from "../../iconsSvgPath";
+import { CardData } from "../../CardsData";
+import { AreaLineComposedGraph } from "../Graph/AreaLineComposedGraph";
+import { BarChartGraph } from "../Graph/BarChartGraph";
 
 const GraphicalCardItem: React.FC<CardData> = (props) => {
    const compPadding =

@@ -1,6 +1,6 @@
-import CardItem from "./Cards/CardItem";
-import { CardsListData } from "../CardsData";
-import GraphicalCardItem from "./Graph/GraphicalCardItem";
+import CardItem from "./CardItem";
+import { CardsListData } from "../../CardsData";
+import GraphicalCardItem from "../Graph/GraphicalCardItem";
 
 const CardsList = () => {
    return (

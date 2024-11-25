@@ -9,7 +9,7 @@ import {
    XAxis,
    YAxis,
 } from "recharts";
-import { CardData } from "../CardsData";
+import { CardData } from "../../CardsData";
 
 //TODO: Check the Overview Items Margin Between Name & Qty
 
