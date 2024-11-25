@@ -1,4 +1,4 @@
-import CardsList from "./Cards/CardsList";
+import CardsList from "./CardsList";
 
 const Hero = () => {
    return (
