@@ -1,4 +1,4 @@
-import Logo from "../../assets/tic-tac-toe.png";
+import Logo from "../../assets/Images/tic-tac-toe.png";
 import SidebarItemsList from "./SidebarItemsList";
 import SidebarFooterItems from "./SidebarFooterItems";
 
