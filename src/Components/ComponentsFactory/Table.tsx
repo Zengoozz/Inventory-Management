@@ -31,7 +31,7 @@ const Table: React.FC<CardData> = ({ TableData }) => {
    ));
 
    return (
-      <table className="mt-5 w-full">
+      <table className="mt-3 w-full">
          {TableData?.HeaderFlag == true && (
             <thead className="w-full">
                <tr className="border-y-[1px] border-y-gray-200">

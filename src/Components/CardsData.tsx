@@ -9,6 +9,19 @@ import OnTheWay from "../assets/Icons/OnTheWay.svg";
 import SuppliersSummary from "../assets/Icons/SuppliersSummary.svg";
 import Categories from "../assets/Icons/Categories.svg";
 
+import TataSalt from "../assets/Images/TataSalt.png"
+import Lays from "../assets/Images/Lays.png"
+
+export type CardData = {
+   Index: number;
+   Title: string;
+   Type: string;// O >> Overview , S >> Summary, G >> Graph
+   Icons?: Icon[];
+   GraphsData?: GraphData[];
+   TableData?: TableData;
+   Items?: ItemData[];
+};
+
 export type Icon = {
    Name: string;
    Icon: string;
@@ -28,14 +41,12 @@ export type TableData = {
    Elements: string[][];
 }
 
-export type CardData = {
-   Index: number;
-   Title: string;
-   Type: string;// O >> Overview , S >> Summary, G >> Graph
-   Icons?: Icon[];
-   GraphsData?: GraphData[];
-   TableData?: TableData;
-};
+export type ItemData = {
+   Image: string,
+   Name: string,
+   Description: string,
+   Status?: string
+}
 
 export const CardsListData: CardData[] = [
    {
@@ -260,5 +271,24 @@ export const CardsListData: CardData[] = [
             ["parle g", "19", "17", "₹ 105"]
          ]
       }
+   },
+   {
+      Index: 7,
+      Type:"SI",
+      Title:"low quantity stock",
+      Items: [
+         {
+            Image: TataSalt,
+            Name: "tata salt",
+            Description: "remaining quantity: 10 packet",
+            Status: "low"
+         },
+         {
+            Image: Lays,
+            Name: "Lays",
+            Description: "remaining quantity: 15 packet",
+            Status: "low"
+         }
+      ]
    }
 ];

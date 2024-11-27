@@ -5,13 +5,35 @@ import { BarChartGraph } from "../Hero/Graph/BarChartGraph";
 import IconFactory from "./IconFactory";
 import { listOfPaths } from "../iconsSvgPath";
 import Table from "./Table";
-
+import ItemsGrid from "./ItemsGrid";
 
 const GeneralCardItem: React.FC<CardData> = (props) => {
+   // #NOTE: Styles
    const compPadding =
       props.Type == "S" ? "pt-5 pb-[0.813rem] px-4" : "pt-5 pb-[1.563rem] px-4";
 
    const listOfItemsMargin = props.Type == "O" ? "mt-[1.375rem]" : "mt-[1rem]";
+
+   // #NOTE: HelperComponenets
+
+   const GraphRearButton: React.FC = () => {
+      const calendarIcon = listOfPaths.filter((c) => c.name == "calendar");
+   
+      return (
+         <button className="flex px-4 py-[0.375rem] text-gray-600 text-base font-medium border-2 border-gray-100 rounded-[4px] duration-150 hover:border-gray-300 hover:font-semibold">
+            <IconFactory {...calendarIcon[0]} />
+            <span className="ml-2 capitalize">weekly</span>
+         </button>
+      );
+   };
+   
+   const SeeAllButton: React.FC = () => {
+      return (
+         <button className="text-blue-700 text-sm font-normal border-none duration-150 hover:font-semibold hover:text-blue-900 hover:underline">
+            <span className="capitalize">see all</span>
+         </button>
+      );
+   };
 
    return (
       <div className={`${compPadding} h-full rounded-lg bg-white`}>
@@ -22,21 +44,6 @@ const GeneralCardItem: React.FC<CardData> = (props) => {
             {props.Type == "GB" && <GraphRearButton />}
             {props.Type.includes("S") && <SeeAllButton />}
          </span>
-         {/* #NOTE: Table */}
-         {props.Type == "ST" && ( // #LATER: ResponsiveContainer Resizing
-            <Table
-               {...props}
-            />
-         )}
-
-         {/* #NOTE: Graph */}
-         {props.Type == "GB" && ( // #LATER: ResponsiveContainer Resizing
-            <BarChartGraph {...props} />
-         )}
-
-         {props.Type == "GC" && ( // #LATER: ResponsiveContainer Resizing
-            <AreaLineComposedGraph {...props} />
-         )}
 
          {/* #NOTE: Overview & Summary */}
          {!props.Type.includes("G") && (
@@ -58,30 +65,33 @@ const GeneralCardItem: React.FC<CardData> = (props) => {
                   ))}
             </div>
          )}
+
+         {/* #NOTE: Graph */}
+         {props.Type == "GB" && ( // #LATER: ResponsiveContainer Resizing
+            <BarChartGraph {...props} />
+         )}
+
+         {props.Type == "GC" && ( // #LATER: ResponsiveContainer Resizing
+            <AreaLineComposedGraph {...props} />
+         )}
+
+         {/* #NOTE: Table */}
+         {props.Type == "ST" && ( // #LATER: ResponsiveContainer Resizing
+            <Table {...props} />
+         )}
+
+         {/* #NOTE: Table */}
+         {props.Type == "SI" && ( // #LATER: ResponsiveContainer Resizing
+            <ItemsGrid {...props} />
+         )}
+         
       </div>
    );
 };
 
 export default GeneralCardItem;
 
-const GraphRearButton: React.FC = () => {
-   const calendarIcon = listOfPaths.filter((c) => c.name == "calendar");
 
-   return (
-      <button className="flex px-4 py-[0.375rem] text-gray-600 text-base font-medium border-2 border-gray-100 rounded-[4px] duration-150 hover:border-gray-300 hover:font-semibold">
-         <IconFactory {...calendarIcon[0]} />
-         <span className="ml-2 capitalize">weekly</span>
-      </button>
-   );
-};
-
-const SeeAllButton: React.FC = () => {
-   return (
-      <button className="text-blue-700 text-sm font-normal border-none duration-150 hover:font-semibold hover:text-blue-900">
-         <span className="capitalize">see all</span>
-      </button>
-   );
-};
 
 // interface graphProps {
 //    children: ReactElement;
