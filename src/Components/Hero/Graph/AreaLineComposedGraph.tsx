@@ -11,7 +11,7 @@ import {
 } from "recharts";
 import { CardData } from "../../CardsData";
 
-//TODO: Check the Overview Items Margin Between Name & Qty
+//#DONE: Check the Overview Items Margin Between Name & Qty
 
 export const AreaLineComposedGraph: React.FC<CardData> = (props) => (
    <ResponsiveContainer
@@ -20,7 +20,7 @@ export const AreaLineComposedGraph: React.FC<CardData> = (props) => (
       maxHeight={260}
       className={"mt-10"}
    > 
-      <ComposedChart // #DEBUG: ResponsiveContainer Resizing
+      <ComposedChart // #LATER: ResponsiveContainer Resizing
          // width={360}
          width={360}
          height={240}
@@ -39,7 +39,7 @@ export const AreaLineComposedGraph: React.FC<CardData> = (props) => (
 
          <YAxis
             tickCount={5}
-            ticks={[1000, 2000, 3000, 4000]}
+            ticks={[0, 1000, 2000, 3000, 4000]}
          />
 
          <Tooltip />

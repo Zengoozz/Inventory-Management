@@ -1,4 +1,5 @@
-import { PathObject } from "./iconsSvgPath";
+import { PathObject } from "../iconsSvgPath";
+import { v4 as uuidv4 } from "uuid";
 
 const IconFactory = (props: PathObject) => {
    const grayLevel = `text-gray-${props.grayLevel}`;
@@ -14,7 +15,6 @@ const IconFactory = (props: PathObject) => {
    return (
       <>
          <svg
-            key={props.name}
             className={`inline-block ${classList}`}
             width={width}
             height={height}
@@ -26,7 +26,7 @@ const IconFactory = (props: PathObject) => {
             {props.path.length > 1 ? (
                props.path.map((p) => (
                   <path
-                     key={p}
+                     key={uuidv4()}
                      d={p}
                      fill={fill}
                      stroke={stroke}
@@ -35,6 +35,7 @@ const IconFactory = (props: PathObject) => {
                ))
             ) : (
                <path
+                  key={uuidv4()}
                   d={props.path[0]}
                   fill={fill}
                   stroke={stroke}

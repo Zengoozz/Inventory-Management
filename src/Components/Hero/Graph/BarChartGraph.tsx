@@ -16,7 +16,7 @@ export const BarChartGraph: React.FC<CardData> = (props) => {
       <ResponsiveContainer
          width="100%"
          height="100%"
-         maxHeight={260}
+         maxHeight={261}
          className={"mt-10"}
       >
          <BarChart
@@ -136,14 +136,16 @@ export const BarChartGraph: React.FC<CardData> = (props) => {
 
             <XAxis dataKey="xAxisName" />
 
-            <YAxis tickCount={6} />
+            <YAxis
+               tickCount={6}
+               ticks={[0, 15000, 30000, 45000, 60000, 75000]}
+            />
 
             <Tooltip />
 
             <Legend content={<RenderLegend />} />
 
             <Bar
-               width={1}
                dataKey="yAxisVal1"
                name="Purchase"
                fill="url(#barGradient1)"
@@ -156,7 +158,6 @@ export const BarChartGraph: React.FC<CardData> = (props) => {
             />
 
             <Bar
-               width={1}
                dataKey="yAxisVal2"
                name="Sales"
                fill="url(#barGradient2)"

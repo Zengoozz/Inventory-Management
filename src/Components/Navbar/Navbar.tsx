@@ -1,5 +1,5 @@
 import ProfileIcon from "../../assets/ProfileIcon.jpeg";
-import IconFactory from "../IconFactory";
+import IconFactory from "../ComponentsFactory/IconFactory";
 import { listOfPaths, PathObject } from "../iconsSvgPath";
 
 const emptyPathObject = {

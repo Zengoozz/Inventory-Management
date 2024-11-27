@@ -22,12 +22,19 @@ export type GraphData = {
    yAxisVal2: number;
 }
 
+export type TableData = {
+   HeaderFlag: boolean;
+   Headers: string[];
+   Elements: string[][];
+}
+
 export type CardData = {
    Index: number;
    Title: string;
    Type: string;// O >> Overview , S >> Summary, G >> Graph
    Icons?: Icon[];
    GraphsData?: GraphData[];
+   TableData?: TableData;
 };
 
 export const CardsListData: CardData[] = [
@@ -239,5 +246,19 @@ export const CardsListData: CardData[] = [
             yAxisVal2: 3200,
          }
       ],
+   },
+   {
+      Index: 6,
+      Type:"ST",
+      Title:"top selling stock",
+      TableData:{
+         HeaderFlag: true,
+         Headers: ["name", "sold quantity", "remaining quantity", "price"],
+         Elements:[
+            ["surf excel", "30", "12", "₹ 100"],
+            ["rin", "21", "15", "₹ 207"],
+            ["parle g", "19", "17", "₹ 105"]
+         ]
+      }
    }
 ];

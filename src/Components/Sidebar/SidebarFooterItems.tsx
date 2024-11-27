@@ -1,5 +1,7 @@
 import { listOfPaths } from "../iconsSvgPath"
 import SidebarItem from "./SidebarItem"
+import {v4 as uuidv4} from "uuid";
+
 
 const SidebarFooterItems = () => {
   return (
@@ -8,7 +10,7 @@ const SidebarFooterItems = () => {
             .filter((p) => p.sidebarFooterItem)
             .map((p) => (
                <SidebarItem
-                  key={p.name}
+                  key={uuidv4()}
                   name={p.name}
                   path={p.path}
                   grayLevel={p.grayLevel}
