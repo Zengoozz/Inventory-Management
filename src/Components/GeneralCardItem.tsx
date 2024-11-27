@@ -1,3 +1,4 @@
+
 import { CardData } from "./CardsData";
 import InfoItem from "./Hero/Cards/InfoItem";
 import { AreaLineComposedGraph } from "./Hero/Graph/AreaLineComposedGraph";
@@ -10,7 +11,7 @@ const GeneralCardItem: React.FC<CardData> = (props) => {
       props.Type == "S" ? "pt-5 pb-[0.813rem] px-4" : "pt-5 pb-[1.563rem] px-4";
 
    const listOfItemsMargin = props.Type == "O" ? "mt-[1.375rem]" : "mt-[1rem]";
-   
+
    return (
       <div className={`${compPadding} h-full rounded-lg bg-white`}>
          <span className="flex justify-between">
@@ -19,11 +20,17 @@ const GeneralCardItem: React.FC<CardData> = (props) => {
             </h1>
             {props.Type == "GB" && <RearButton />}
          </span>
-         {/* #NOTE: Graph */}
-         {props.Type == "GB" && <BarChartGraph {...props} />}
 
-         {props.Type == "GC" && <AreaLineComposedGraph {...props} />}
-         {/* #NOTE: Not Graph */}
+         {/* #NOTE: Graph */}
+         {props.Type == "GB" && ( // #DEBUG: ResponsiveContainer Resizing
+            <BarChartGraph {...props} />
+         )}
+
+         {props.Type == "GC" && ( // #DEBUG: ResponsiveContainer Resizing
+               <AreaLineComposedGraph {...props} />
+         )}
+
+         {/* #NOTE: Overview & Summary */}
          {!props.Type.includes("G") && (
             <div className={`flex justify-between mt- ${listOfItemsMargin}`}>
                {props.Icons &&
@@ -58,3 +65,23 @@ const RearButton: React.FC = () => {
       </button>
    );
 };
+
+// interface graphProps {
+//    children: ReactElement;
+//    width: number;
+//    height: number;
+// }
+
+// const GraphResponsiveContainer: React.FC<graphProps> = (props) => {
+//    // #DEBUG: ResponsiveContainer Resizing
+//    return (
+//       <ResponsiveContainer
+//          width="100%"
+//          height="100%"
+//          maxHeight={260}
+//          className={"mt-[1.625rem]"}
+//       >
+//          {props.children}
+//       </ResponsiveContainer>
+//    );
+// };

@@ -13,66 +13,59 @@ import { CardData } from "../../CardsData";
 
 //TODO: Check the Overview Items Margin Between Name & Qty
 
-export const AreaLineComposedGraph: React.FC<CardData> = (props) => {
-   return (
-      <ResponsiveContainer
-         width="100%"
-         height="100%"
-         maxHeight={300}
-         className={"mt-10"}
+export const AreaLineComposedGraph: React.FC<CardData> = (props) => (
+   <ResponsiveContainer
+      width="100%"
+      height="100%"
+      maxHeight={260}
+      className={"mt-10"}
+   > 
+      <ComposedChart // #DEBUG: ResponsiveContainer Resizing
+         // width={360}
+         width={360}
+         height={240}
+         data={props.GraphsData}
       >
-         <ComposedChart
-            width={500}
-            height={350}
-            data={props.GraphsData}
-            margin={{
-               top: 5,
-               right: 10,
-               left: 0,
-               bottom: 0,
-            }}
-         >
-            <CartesianGrid
-               vertical={false}
-               strokeDasharray="0 0"
-               stroke="#CCC"
-            />
+         <CartesianGrid
+            vertical={false}
+            strokeDasharray="0 0"
+            stroke="#CCC"
+         />
 
-            <XAxis
-               dataKey="xAxisName"
-               ticks={["Jan", "Feb", "Mar", "Apr", "May"]}
-            />
+         <XAxis
+            dataKey="xAxisName"
+            ticks={["Jan", "Feb", "Mar", "Apr", "May"]}
+         />
 
-            <YAxis
-               tickCount={5}
-               ticks={[1000, 2000, 3000, 4000]}
-            />
+         <YAxis
+            tickCount={5}
+            ticks={[1000, 2000, 3000, 4000]}
+         />
 
-            <Tooltip />
+         <Tooltip />
 
-            <Legend content={<RenderLegend />} />
+         <Legend content={<RenderLegend />} />
 
-            <Area
-               type="natural"
-               dataKey="yAxisVal1"
-               name="Ordered"
-               stroke="#DBA362"
-               strokeWidth={3}
-               fill="#DBA362"
-               fillOpacity={0.2}
-            />
-            <Line
-               type="natural"
-               dataKey="yAxisVal2"
-               name="Delivered"
-               stroke="#B6D3FA"
-               strokeWidth={3}
-               dot={false}
-            />
-         </ComposedChart>
-      </ResponsiveContainer>
-   );
-};
+         <Area
+            type="natural"
+            dataKey="yAxisVal1"
+            name="Ordered"
+            stroke="#DBA362"
+            strokeWidth={3}
+            fill="#DBA362"
+            fillOpacity={0.2}
+         />
+         <Line
+            type="natural"
+            dataKey="yAxisVal2"
+            name="Delivered"
+            stroke="#B6D3FA"
+            strokeWidth={3}
+            dot={false}
+         />
+      </ComposedChart>
+   </ResponsiveContainer>
+);
 
 interface LegendPayload {
    value: string; // The label for the legend item

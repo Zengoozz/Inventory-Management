@@ -16,12 +16,12 @@ export const BarChartGraph: React.FC<CardData> = (props) => {
       <ResponsiveContainer
          width="100%"
          height="100%"
-         maxHeight={300}
+         maxHeight={260}
          className={"mt-10"}
       >
          <BarChart
-            width={500}
-            height={300}
+            width={590}
+            height={260}
             data={props.GraphsData}
             margin={{
                top: 5,
@@ -143,6 +143,7 @@ export const BarChartGraph: React.FC<CardData> = (props) => {
             <Legend content={<RenderLegend />} />
 
             <Bar
+               width={1}
                dataKey="yAxisVal1"
                name="Purchase"
                fill="url(#barGradient1)"
@@ -155,6 +156,7 @@ export const BarChartGraph: React.FC<CardData> = (props) => {
             />
 
             <Bar
+               width={1}
                dataKey="yAxisVal2"
                name="Sales"
                fill="url(#barGradient2)"
