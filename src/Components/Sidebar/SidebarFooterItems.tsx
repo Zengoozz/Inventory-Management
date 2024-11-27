@@ -1,4 +1,4 @@
-import { listOfPaths } from "../iconsSvgPath"
+import { listOfPaths } from "../../assets/Data/iconsSvgPath"
 import SidebarItem from "./SidebarItem"
 import {v4 as uuidv4} from "uuid";
 

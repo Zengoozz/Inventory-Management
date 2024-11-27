@@ -1,4 +1,4 @@
-import { CardData } from "../CardsData";
+import { CardData } from "../../assets/Data/CardsData";
 import { v4 as uuidv4 } from "uuid";
 
 const Table: React.FC<CardData> = ({ TableData }) => {

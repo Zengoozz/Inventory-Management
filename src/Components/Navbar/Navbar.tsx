@@ -1,6 +1,6 @@
 import ProfileIcon from "../../assets/Images/ProfileIcon.jpeg";
 import IconFactory from "../ComponentsFactory/IconFactory";
-import { listOfPaths, PathObject } from "../iconsSvgPath";
+import { listOfPaths, PathObject } from "../../assets/Data/iconsSvgPath";
 
 const emptyPathObject = {
    name: "",

@@ -1,4 +1,4 @@
-import { CardData } from "../CardsData";
+import { CardData } from "../../assets/Data/CardsData";
 
 const ItemsGrid: React.FC<CardData> = ({ Items }) => {
    return (

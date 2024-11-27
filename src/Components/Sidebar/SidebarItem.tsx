@@ -1,5 +1,5 @@
 import IconFactory from "../ComponentsFactory/IconFactory";
-import { PathObject } from "../iconsSvgPath";
+import { PathObject } from "../../assets/Data/iconsSvgPath";
 import { v4 as uuidv4 } from "uuid";
 
 const SidebarItem = (props: PathObject) => {
