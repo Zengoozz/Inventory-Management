@@ -2,7 +2,7 @@ import { CardsListData } from "../../assets/Data/CardsData";
 import GeneralCardItem from "../ComponentsFactory/GeneralCardItem";
 import { v4 as uuidv4 } from 'uuid';
 
-const CardsList = () => {
+const Dashboard = () => {
    return (
       <div className="grid grid-cols-[20fr_11fr] grid-rows-[10.25rem_10.25rem_22.5rem_19.25rem] gap-[1.375rem]">
          {CardsListData.map((data, index) => {
@@ -17,4 +17,4 @@ const CardsList = () => {
    );
 };
 
-export default CardsList;
+export default Dashboard;

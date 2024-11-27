@@ -1,9 +1,9 @@
-import CardsList from "../Dashboard/CardsList";
+import Dashboard from "../Dashboard/Dashboard";
 
 const Hero = () => {
    return (
       <>
-         <CardsList />
+         <Dashboard />
       </>
    );
 };
