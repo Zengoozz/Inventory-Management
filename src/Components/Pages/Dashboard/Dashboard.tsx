@@ -1,5 +1,5 @@
-import { CardsListData } from "../../assets/Data/CardsData";
-import GeneralCardItem from "../ComponentsFactory/GeneralCardItem";
+import { CardsListData } from "../../../Data/CardsData";
+import GeneralCardItem from "../../ComponentsFactory/GeneralCardItem";
 import { v4 as uuidv4 } from 'uuid';
 
 const Dashboard = () => {

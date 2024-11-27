@@ -1,4 +1,4 @@
-import { Icon } from "../../../assets/Data/CardsData";
+import { Icon } from "../../../../Data/CardsData";
 
 type props = {
    order: number;

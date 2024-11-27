@@ -9,7 +9,7 @@ import {
    XAxis,
    YAxis,
 } from "recharts";
-import { CardData } from "../../../assets/Data/CardsData";
+import { CardData } from "../../../../Data/CardsData";
 
 export const BarChartGraph: React.FC<CardData> = (props) => {
    return (

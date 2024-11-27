@@ -1,9 +1,9 @@
-import Dashboard from "../Dashboard/Dashboard";
+import Router from "../../Router";
 
 const Hero = () => {
    return (
       <>
-         <Dashboard />
+         <Router />
       </>
    );
 };

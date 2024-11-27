@@ -1,9 +1,9 @@
-import { CardData } from "../../assets/Data/CardsData";
-import InfoItem from "../Dashboard/Cards/InfoItem";
-import { AreaLineComposedGraph } from "../Dashboard/Graph/AreaLineComposedGraph";
-import { BarChartGraph } from "../Dashboard/Graph/BarChartGraph";
+import { CardData } from "../../Data/CardsData";
+import InfoItem from "../Pages/Dashboard/Cards/InfoItem";
+import { AreaLineComposedGraph } from "../Pages/Dashboard/Graph/AreaLineComposedGraph";
+import { BarChartGraph } from "../Pages/Dashboard/Graph/BarChartGraph";
 import IconFactory from "./IconFactory";
-import { listOfPaths } from "../../assets/Data/iconsSvgPath";
+import { listOfPaths } from "../../Data/iconsSvgPath";
 import Table from "./Table";
 import ItemsGrid from "./ItemsGrid";
 

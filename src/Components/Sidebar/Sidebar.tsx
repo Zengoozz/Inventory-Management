@@ -3,6 +3,7 @@ import SidebarItemsList from "./SidebarItemsList";
 import SidebarFooterItems from "./SidebarFooterItems";
 
 const Sidebar = () => {
+   // const [activePage, ]
    return (
       <div className="mx-6 mt-7">
          <span className="mb-8 flex items-center">

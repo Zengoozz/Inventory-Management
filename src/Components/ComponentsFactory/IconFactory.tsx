@@ -1,4 +1,4 @@
-import { PathObject } from "../../assets/Data/iconsSvgPath";
+import { PathObject } from "../../Data/iconsSvgPath";
 import { v4 as uuidv4 } from "uuid";
 
 const IconFactory = (props: PathObject) => {
